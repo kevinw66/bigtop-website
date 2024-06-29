@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Bigtop Manager',
+  title: 'Apache Bigtop',
   tagline: 'Packaging and Testing Apache Hadoop ecosystem.',
   favicon: 'img/favicon.ico',
 
@@ -61,19 +61,82 @@ const config = {
     ({
       // image: 'img/social-card.jpg',
       navbar: {
-        title: 'Bigtop',
+        title: 'Apache Bigtop',
         logo: {
-          alt: 'Bigtop Logo',
+          alt: 'Apache Bigtop Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'documentSidebar',
+            type: 'dropdown',
             position: 'left',
-            label: 'Docs',
+            label: 'Releases',
+            items: [
+              {
+                label: 'Release Notes',
+                href: 'https://bigtop.apache.org/release-notes.html',
+              },
+              {
+                label: '3.0.0',
+                href: 'https://archive.apache.org/dist/bigtop/bigtop-3.0.0/',
+              },
+              {
+                label: '1.5.0',
+                href: 'https://archive.apache.org/dist/bigtop/bigtop-1.5.0/',
+              },
+            ],
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            type: 'dropdown',
+            position: 'left',
+            label: 'Documentation',
+            items: [
+              {
+                type: 'doc',
+                docId: 'getting-started/quickstart-guide',
+                label: 'Documentation',
+              },
+              {
+                label: 'Wiki',
+                href: 'https://cwiki.apache.org/confluence/display/BIGTOP',
+              },
+            ]
+          },{
+            type: 'dropdown',
+            position: 'left',
+            label: 'Project Information',
+            items: [
+              {
+                label: 'Powered by',
+                href: 'https://cwiki.apache.org/confluence/display/BIGTOP/Powered+By+Bigtop',
+              },
+              {
+                label: 'Who we are',
+                href: 'https://bigtop.apache.org/team-list.html',
+              },
+              {
+                label: 'Feedback',
+                href: 'https://bigtop.apache.org/issue-tracking.html',
+              },
+              {
+                label: 'JIRA',
+                href: 'https://issues.apache.org/jira/projects/BIGTOP/issues',
+              },
+              {
+                label: 'Blog',
+                href: 'https://blogs.apache.org/bigtop/',
+              },
+              {
+                label: 'Maling List',
+                href: 'https://bigtop.apache.org/mail-lists.html',
+              },
+              {
+                label: 'IRC Channel',
+                href: 'https://bigtop.apache.org/irc-channel.html',
+              },
+            ],
+          },
+          // { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/docs/first-doc', label: 'bigtop', position: 'right'},
           { to: '/bigtop-manager/first-doc', label: 'bigtop-manager', position: 'right'},
           { type: 'docsVersionDropdown', docsPluginId: 'default', position: 'right' },
@@ -86,7 +149,30 @@ const config = {
             href: 'https://gitee.com/openeuler/bigtop-manager',
             label: 'Gitee',
             position: 'right',
-          }
+          },
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'ASF',
+            items: [
+              {
+                label: 'How Apache Works',
+                href: 'https://www.apache.org/foundation/how-it-works.html',
+              },
+              {
+                label: 'Foundation',
+                href: 'https://www.apache.org/foundation/',
+              },
+              {
+                label: 'Sponsering Apache',
+                href: 'https://www.apache.org/foundation/sponsorship.html',
+              },
+              {
+                label: 'Thanks',
+                href: 'https://www.apache.org/foundation/thanks.html',
+              },
+            ],
+          },
         ],
       },
       footer: {
