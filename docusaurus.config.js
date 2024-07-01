@@ -94,12 +94,14 @@ const config = {
               {
                 type: 'doc',
                 docId: 'getting-started/quickstart-guide',
-                label: 'Documentation',
+                label: 'Bigtop',
               },
               {
-                label: 'Wiki',
-                href: 'https://cwiki.apache.org/confluence/display/BIGTOP',
-              },
+                type: 'doc',
+                docsPluginId: 'bigtop-manager',
+                docId: 'first-doc',
+                label: 'Bigtop Manager',
+              }
             ]
           },{
             type: 'dropdown',
@@ -137,14 +139,8 @@ const config = {
             ],
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/docs/first-doc', label: 'bigtop', position: 'right'},
-          { to: '/bigtop-manager/first-doc', label: 'bigtop-manager', position: 'right'},
           { type: 'docsVersionDropdown', docsPluginId: 'default', position: 'right' },
           { type: 'docsVersionDropdown', docsPluginId: 'bigtop-manager', position: 'right'},
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
           {
             href: 'https://gitee.com/openeuler/bigtop-manager',
             label: 'Gitee',
@@ -153,7 +149,7 @@ const config = {
           {
             type: 'dropdown',
             position: 'right',
-            label: 'ASF',
+            label: 'Apache Software Foundation',
             items: [
               {
                 label: 'How Apache Works',
@@ -172,6 +168,10 @@ const config = {
                 href: 'https://www.apache.org/foundation/thanks.html',
               },
             ],
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
         ],
       },
