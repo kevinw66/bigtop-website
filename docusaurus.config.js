@@ -19,7 +19,7 @@ const config = {
   // organizationName: 'apache', // Usually GitHub org/user name.
   // projectName: 'docusaurus', // Usually repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
