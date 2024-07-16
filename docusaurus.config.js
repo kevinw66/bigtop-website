@@ -8,10 +8,12 @@ const config = {
   tagline: 'Packaging and Testing Apache Hadoop ecosystem.',
   favicon: 'img/favicon.ico',
 
-  // production url of site, modify later
-  url: 'https://docusaurus-site.example.com',
-  // pathname under which site is served
-  baseUrl: '/',
+
+  // Set the production url of your site here
+  url: 'https://kevinw66.github.io/',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/bigtop-website/',
 
   // GitHub pages deployment config.
   // organizationName: 'apache', // Usually GitHub org/user name.
