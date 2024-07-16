@@ -1,16 +1,13 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Bigtop Manager',
-  tagline: 'Dinosaurs are cool',
+  title: 'Apache Bigtop',
+  tagline: 'Packaging and Testing Apache Hadoop ecosystem.',
   favicon: 'img/favicon.ico',
+
 
   // Set the production url of your site here
   url: 'https://kevinw66.github.io/',
@@ -19,19 +16,15 @@ const config = {
   baseUrl: '/bigtop-website/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // organizationName: 'apache', // Usually GitHub org/user name.
+  // projectName: 'docusaurus', // Usually repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en','zh-CN'],
   },
 
   presets: [
@@ -41,17 +34,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // later: pointer to our website repo.
+          // editUrl: 'https://github.com/.../',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -59,29 +46,133 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bigtop-manager',
+        path: 'bigtop-manager',
+        routeBasePath: 'bigtop-manager',
+        sidebarPath: './sidebarsBigtopManager.js',
+      }
+    ]
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Apache Bigtop',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Apache Bigtop Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'dropdown',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Releases',
+            items: [
+              {
+                label: 'Release Notes',
+                href: 'https://bigtop.apache.org/release-notes.html',
+              },
+              {
+                label: '3.0.0',
+                href: 'https://archive.apache.org/dist/bigtop/bigtop-3.0.0/',
+              },
+              {
+                label: '1.5.0',
+                href: 'https://archive.apache.org/dist/bigtop/bigtop-1.5.0/',
+              },
+            ],
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'dropdown',
+            position: 'left',
+            label: 'Documentation',
+            items: [
+              {
+                type: 'doc',
+                docId: 'getting-started/quickstart-guide',
+                label: 'Bigtop',
+              },
+              {
+                type: 'doc',
+                docsPluginId: 'bigtop-manager',
+                docId: 'first-doc',
+                label: 'Bigtop Manager',
+              }
+            ]
+          },{
+            type: 'dropdown',
+            position: 'left',
+            label: 'Project Information',
+            items: [
+              {
+                label: 'Powered by',
+                href: 'https://cwiki.apache.org/confluence/display/BIGTOP/Powered+By+Bigtop',
+              },
+              {
+                label: 'Who we are',
+                href: 'https://bigtop.apache.org/team-list.html',
+              },
+              {
+                label: 'Feedback',
+                href: 'https://bigtop.apache.org/issue-tracking.html',
+              },
+              {
+                label: 'JIRA',
+                href: 'https://issues.apache.org/jira/projects/BIGTOP/issues',
+              },
+              {
+                label: 'Blog',
+                href: 'https://blogs.apache.org/bigtop/',
+              },
+              {
+                label: 'Maling List',
+                href: 'https://bigtop.apache.org/mail-lists.html',
+              },
+              {
+                label: 'IRC Channel',
+                href: 'https://bigtop.apache.org/irc-channel.html',
+              },
+            ],
+          },
+          // { to: '/blog', label: 'Blog', position: 'left' },
+          { type: 'docsVersionDropdown', docsPluginId: 'default', position: 'right' },
+          { type: 'docsVersionDropdown', docsPluginId: 'bigtop-manager', position: 'right'},
+          {
+            href: 'https://gitee.com/openeuler/bigtop-manager',
+            label: 'Gitee',
+            position: 'right',
+          },
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'Apache Software Foundation',
+            items: [
+              {
+                label: 'How Apache Works',
+                href: 'https://www.apache.org/foundation/how-it-works.html',
+              },
+              {
+                label: 'Foundation',
+                href: 'https://www.apache.org/foundation/',
+              },
+              {
+                label: 'Sponsering Apache',
+                href: 'https://www.apache.org/foundation/sponsorship.html',
+              },
+              {
+                label: 'Thanks',
+                href: 'https://www.apache.org/foundation/thanks.html',
+              },
+            ],
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
@@ -103,15 +194,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://stackoverflow.com',
               },
             ],
           },
@@ -119,17 +202,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Gitee',
+                href: 'https://gitee.com/openeuler/bigtop-manager',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © 2024 Bigtop Manager.`,
       },
       prism: {
         theme: prismThemes.github,
