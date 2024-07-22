@@ -1,0 +1,12 @@
+{
+  "page.index.Get Started": {
+    "message": "开始教程"
+  },
+  "page.index.Overview": {
+    "message": "概述"
+  },
+  "page.index.Overview text content": {
+    "message": "概述的中文翻译",
+    "description": "the detail content of Overview"
+  }
+}
