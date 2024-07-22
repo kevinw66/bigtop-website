@@ -7,6 +7,7 @@ import styles from './index.module.css';
 import Confetti from '@site/src/components/Confetti';
 import Overview from '@site/src/components/Overview';
 import SupportedProjects from '@site/src/components/SupportedProjects';
+import Translate, {translate} from '@docusaurus/Translate';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -20,7 +21,11 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/getting-started/quickstart-guide">
-            GET STARTED
+              <Translate
+                id='page.index.Get Started'
+              >
+                GET STARTED
+              </Translate>
           </Link>
         </div>
       </div>
