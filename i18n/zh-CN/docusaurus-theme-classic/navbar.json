@@ -1,0 +1,44 @@
+{
+    "item.label.Releases": {
+        "message": "发布事项"
+    },
+    "item.label.Documentation": {
+        "message": "文档"
+    },  
+    "item.label.Project Information": {
+        "message": "项目信息"
+    },    
+    "item.label.Powered by": {
+        "message": "提供支持"
+    },
+    "item.label.Who we are": {
+        "message": "项目介绍"
+    },
+    "item.label.Feedback": {
+        "message": "反馈"
+    }, 
+    "item.label.Blog": {
+        "message": "博客"
+    },
+    "item.label.Maling List": {
+        "message": "邮件列表"
+    },
+    "item.label.IRC Channel": {
+        "message": "IRC 频道"
+    },
+    "item.label.Apache Software Foundation": {
+        "message": "Apache 软件基金会"
+    },
+    "item.label.How Apache Works": {
+        "message": "Apache 如何运作"
+    },
+    "item.label.Foundation": {
+        "message": "基金会"
+    },
+    "item.label.Sponsering Apache": {
+        "message": "赞助 Apache"
+    },
+    "item.label.Thanks": {
+        "message": "感谢"
+    }
+}

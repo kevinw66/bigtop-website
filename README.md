@@ -2,19 +2,26 @@
 
 ### Installation
 
-```
+```shell
 $ pnpm install
 ```
 
 ### Local Development
 
-```
+```shell
 $ pnpm start
+```
+
+### run with i18n
+
+```shell
+# https://docusaurus.io/docs/i18n/introduction
+$ pnpm run start -- --locale zh-CN
 ```
 
 ### deploy site with i18n
 
-```
+```shell
 $ pnpm run build
 ```
 Docusaurus will build one single-page application per locale:
