@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
@@ -53,13 +54,24 @@ export default function Overview() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <h2 className={styles.title}>Overview</h2>
+        <h2 className={styles.title}>
+          <Translate
+            id='page.index.Overview'
+          >
+            Overview
+          </Translate>
+        </h2>
         <p className={styles.description}>
-          Bigtop is an Apache Foundation project for Infrastructure Engineers
-          and Data Scientists looking for comprehensive packaging, testing,
-          and configuration of the leading open source big data components.
-          Bigtop supports a wide range of components/projects, including,
-          but not limited to, Hadoop, HBase and Spark.
+          <Translate
+            id='page.index.Overview text content'
+            description='the detail content of Overview'
+          >
+            Bigtop is an Apache Foundation project for Infrastructure Engineers
+            and Data Scientists looking for comprehensive packaging, testing,
+            and configuration of the leading open source big data components.
+            Bigtop supports a wide range of components/projects, including,
+            but not limited to, Hadoop, HBase and Spark.
+          </Translate>
         </p>
         <div className="row">
           {FeatureList.map((props, idx) => (
